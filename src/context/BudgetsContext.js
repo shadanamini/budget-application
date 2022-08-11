@@ -10,8 +10,8 @@ function useBudgets() {
 
 export const BudgetsProvider = ({children}) => {
 
-    const [budgets, setBudgets] = useState([])
-    const [expenses, setExpenses] = useState([])
+    const [budgets, setBudgets] = useState('budgets', [])
+    const [expenses, setExpenses] = useState('expenses', [])
 
     function getBudgetExpenses(budgetId) {
         return expenses.filter(expense => expense.budgetId === budgetId)
